@@ -3,17 +3,139 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#FFFDD0"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion_layout_question"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutDescription="@xml/activity_main_xml_motion_layout_question_scene"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/quizQuestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_button_style"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:text="सबसे  बढ़ि‌या साईलेज (आचार) किस फसल से बनता है। "
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/answer1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/white_button_style"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Answer 1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/answer2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/quizQuestion" />
+
+        <TextView
+            android:id="@+id/answer2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_button_style"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Answer 1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/answer1"
+            app:layout_constraintTop_toBottomOf="@id/quizQuestion" />
+
+        <TextView
+            android:id="@+id/answer3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/white_button_style"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Answer 1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/answer4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/answer1" />
+
+        <TextView
+            android:id="@+id/answer4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/white_button_style"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Answer 1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/answer3"
+            app:layout_constraintTop_toBottomOf="@id/answer2" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifimg"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/win"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/motion_layout_question"
+        app:layout_constraintEnd_toEndOf="@id/motion_layout_question"
+        app:layout_constraintStart_toStartOf="@id/motion_layout_question"
+        app:layout_constraintTop_toTopOf="@id/motion_layout_question" />
+
+    <TextView
+        android:id="@+id/resultbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/inria_sans_regular"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text=" You are a smart farmer\n Congratulations!!!"
+        android:textColor="#797ef6"
+        android:textSize="22sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gifimg" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
