@@ -9,8 +9,9 @@
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/start"
+        android:src="@drawable/cottons"
         android:scaleType="centerCrop"
         android:id="@+id/startquiz"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

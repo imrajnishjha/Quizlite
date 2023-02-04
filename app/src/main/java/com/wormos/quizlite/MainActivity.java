@@ -93,9 +93,8 @@ public class MainActivity extends AppCompatActivity {
             other1.setBackground(ContextCompat.getDrawable(MainActivity.this, R.drawable.white_button_style));
             other2.setBackground(ContextCompat.getDrawable(MainActivity.this, R.drawable.white_button_style));
             other3.setBackground(ContextCompat.getDrawable(MainActivity.this, R.drawable.white_button_style));
-            resultBox.setText("YOU LOSE");
+            resultBox.setText("ਗਲਤ ਜਵਾਬ");
             resultBox.setTextColor(Color.parseColor("#f94449"));
-
             gifImageView.setImageResource(R.drawable.wrong);
             gifImageView.setVisibility(View.VISIBLE);
             resultBox.setVisibility(View.VISIBLE);
@@ -107,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
             other1.setBackground(ContextCompat.getDrawable(MainActivity.this, R.drawable.white_button_style));
             other2.setBackground(ContextCompat.getDrawable(MainActivity.this, R.drawable.white_button_style));
             other3.setBackground(ContextCompat.getDrawable(MainActivity.this, R.drawable.white_button_style));
-            resultBox.setText("You are a smart farmer\n Congratulations!!!");
+            resultBox.setText("ਤੁਸੀਂ ਹੋ ਸਮਾਰਟ ਸਾਈਲੇਜ ਕਿਸਾਨ");
             resultBox.setTextColor(Color.parseColor("#797ef6"));
             rightsound.seekTo(6000);
             gifImageView.setImageResource(R.drawable.win);
@@ -145,33 +144,33 @@ public class MainActivity extends AppCompatActivity {
         answer4.setClickable(true);
         switch(number%4){
             case 0:
-                Question.setText(String.valueOf("P-1844 का साइलेज देता है, सबसे अधिक"));
-                answer1.setText(String.valueOf("ड्राई मैटर + स्टार्स"));
-                answer2.setText(String.valueOf("ड्राई मैटर + फाईबर"));
-                answer3.setText(String.valueOf("ड्राई मैटर + प्रोद्रीन"));
-                answer4.setText(String.valueOf("उपरोक्त सभी"));
+                Question.setText(String.valueOf("P-1844 ਦਾ ਸਾਈਲੇਜ ਦਿੰਦਾ ਹੈ, ਸਭਤੋਂ ਵੱਧ"));
+                answer1.setText(String.valueOf("ਡ੍ਰਾਈ ਮੈਟਰ + ਸਟਾਰਚ"));
+                answer2.setText(String.valueOf("ਡ੍ਰਾਈ ਮੈਟਰ+ ਫਾਈਬਰ"));
+                answer3.setText(String.valueOf("ਡ੍ਰਾਈ ਮੈਟਰ+ ਪ੍ਰੋਟੀਨ"));
+                answer4.setText(String.valueOf("ਉਪਰ ਲਿਖੇ ਸਾਰੇ"));
                 answer=4;
                 break;
             case 1:
-                Question.setText(String.valueOf("सबसे  बढ़िया साईलेज (आचार) किस फसल से बनता है।"));
-                answer1.setText(String.valueOf("ईख"));
-                answer2.setText(String.valueOf("चरी"));
-                answer3.setText(String.valueOf("मक्की"));
-                answer4.setText(String.valueOf("गेहूँ"));
-                answer=2;
+                Question.setText(String.valueOf("ਸਭ ਤੋਂ ਵਧੀਆਂ ਸਾਈਲੇਜ (ਆਚਾਰ) ਕਿਸ ਫ਼ਸਲ ਤੋਂ ਬਣਦਾ ਹੈ।"));
+                answer1.setText(String.valueOf("ਗੰਨਾ"));
+                answer2.setText(String.valueOf("ਚਰੀ"));
+                answer3.setText(String.valueOf("ਮੱਕੀ"));
+                answer4.setText(String.valueOf("ਕਣਕ"));
+                answer=3;
                 break;
             case 2:
-                Question.setText(String.valueOf("पायोनियर कम्पनी, बढ़िया साईलेज बनाने के लिए किस हाई बिड्र की सिफारिश करती है?"));
+                Question.setText(String.valueOf("ਪਾਯੌਨਿਅਰ ਕੰਪਨੀ, ਵਧੀਆਂ ਸਾਈਲੇਜ ਬਣਾਉਣ ਲਈ ਕਿਸ ਹਾਈਬ੍ਰਿਡ ਦੀ ਸਿਫਾਰੀਸ਼ ਕਰਦੀ ਹੈ?"));
                 answer1.setText(String.valueOf("P-1844"));
                 answer2.setText(String.valueOf("P-1899"));
                 answer3.setText(String.valueOf("P-1890"));
-                answer4.setText(String.valueOf("उपरोक्त सभी"));
+                answer4.setText(String.valueOf("ਉਪਰ ਲਿਖੇ ਸਾਰੇ"));
                 answer=1;
                 break;
             case 3:
-                Question.setText(String.valueOf("क्या P-1844 हाईविड्र को गेहूं काटने के बाद बोज सकते हैं?"));
-                answer1.setText(String.valueOf("हाँ"));
-                answer2.setText(String.valueOf("नहीं"));
+                Question.setText(String.valueOf("ਕਿ P-1844 ਹਾਈਬ੍ਰਿਡ ਨੂੰ ਕਣਕ ਕਟਣ ਤੋਂ ਬਾਅਦ ਬੀਜ ਸਕਦੇ ਹਾਂ?"));
+                answer1.setText(String.valueOf("ਹਾਂ"));
+                answer2.setText(String.valueOf("ਨਹੀਂ"));
                 answer3.setText(String.valueOf("--"));
                 answer3.setClickable(false);
                 answer4.setClickable(false);
